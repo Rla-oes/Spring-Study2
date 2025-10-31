@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테스트 페이지</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: #FFEFF7;
+            font-family: "Arial", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            animation: pop 0.5s ease;
+        }
+
+        @keyframes pop {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
+        }
+
+        h1 {
+            color: #FF70A6;
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: #555;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 24px;
+            background: #FF8CC6;
+            color: white;
+            border-radius: 20px;
+            text-decoration: none;
+            transition: 0.2s;
+        }
+
+        .btn:hover {
+            background: #FF6BB5;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="card">
+    <h1>🌸 Hello! 🌸</h1>
+    <p>정적 파일 테스트 페이지에 오신 걸 환영합니다 😊</p>
+    <a class="btn" href="/">돌아가기</a>
+</div>
+
+</body>
+</html>
