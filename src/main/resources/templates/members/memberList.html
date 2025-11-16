@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <style>
+        body {
+            font-family: 'Comic Sans MS', 'Nunito', sans-serif;
+            background: linear-gradient(135deg, #CDEFFF, #FDE2FF);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background-color: #FFFFFF;
+            border-radius: 18px;
+            padding: 30px 40px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            width: 450px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            border-radius: 15px;
+            overflow: hidden;
+        }
+
+        th {
+            background: #A5E1FF;
+            color: #4B5563;
+            padding: 12px;
+            font-size: 1.1em;
+            border-bottom: 2px solid #D0F0FF;
+        }
+
+        td {
+            padding: 12px;
+            background: #FFFFFF;
+            color: #6B7280;
+            font-size: 1em;
+            border-bottom: 1px solid #E5E7EB;
+        }
+
+        tr:hover td {
+            background: #F0F9FF;
+            cursor: pointer;
+            color: #111827;
+        }
+
+        tbody tr:last-child td {
+            border-bottom: none;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div>
+        <table>
+            <thead>
+            <tr>
+                <th>#</th>
+                <th>이름</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="member : ${members}">
+                <td th:text="${member.id}"></td>
+                <td th:text="${member.name}"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div> <!-- /container -->
+</body>
+</html>
