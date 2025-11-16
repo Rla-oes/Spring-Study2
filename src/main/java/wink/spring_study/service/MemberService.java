@@ -9,10 +9,10 @@ import wink.spring_study.repository.MemoryMemberRepository;
 import java.util.List;
 import java.util.Optional;
 
-@Service
+// @Service
 public class MemberService {
     private final MemberRepository memberRepository;
-    @Autowired //생성자에 @Autowired를 사용하면 객체 생성 시점에 스프링 컨테이너에서 해당 스프링 빈을 찾아서 주입. 생성자가 1개만 있으면 생략 가능
+    // @Autowired 생성자에 @Autowired를 사용하면 객체 생성 시점에 스프링 컨테이너에서 해당 스프링 빈을 찾아서 주입. 생성자가 1개만 있으면 생략 가능
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }

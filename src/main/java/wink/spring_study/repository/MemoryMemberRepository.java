@@ -3,7 +3,7 @@ import org.springframework.stereotype.Repository;
 import wink.spring_study.domain.Member;
 import  java.util.*;
 
-@Repository
+// @Repository
 public class MemoryMemberRepository implements MemberRepository {
     // 실무에서는 동시성 문제가 있을 수 있어 공유되는 변수일때는 concurrent hashmap을 사용해야함
     private static Map<Long, Member> store = new HashMap<>();
